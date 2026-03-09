@@ -1,0 +1,7 @@
+{{- $args := dict 
+  "default" (i18n "admin.fields.realestates_legal.default")
+  "label" (i18n "admin.fields.realestates_legal.label")
+  "name" "legal"
+  -}}
+
+{{ partial "admin/widgets/text.js" $args }}

@@ -1,0 +1,5 @@
+admin:
+  fields:
+    realestates_legal: 
+      default: 'Information on the risks to which this property is exposed is available on the french government website: www.georisques.gouv.fr'
+      label: 'Legal mentions'
