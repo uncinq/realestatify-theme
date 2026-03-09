@@ -1,3 +1,3 @@
-module github.com/hugolify/realestatify-theme
+module github.com/uncinq/realestatify-theme
 
 go 1.21
