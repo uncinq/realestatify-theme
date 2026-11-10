@@ -8,3 +8,9 @@ module:
       target: layouts
     - source: static
       target: static
+
+params:
+
+  # Admin
+  admin:
+    title: "Realestatify CMS"

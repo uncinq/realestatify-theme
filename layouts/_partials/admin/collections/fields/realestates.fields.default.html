@@ -1,3 +1,7 @@
+{{- /* The fields of hugolify-admin's realestates collection, with the legal
+       notice prefilled with the Géorisques mention, see
+       admin/fields/realestates_legal.yml. Keep the rest in step with
+       admin/collections/fields/realestates.fields.default.html there. */ -}}
 {{- $realestates_persons := false -}}
 {{- $realestates_categories := false -}}
 {{- $realestates_sellers := false -}}
@@ -10,28 +14,32 @@
 {{- if site.Params.admin.collections.realestates_sellers.enable -}}
   {{- $realestates_sellers = dict "relation" (dict "collection" "realestates_sellers" "multiple" false) -}}
 {{- end -}}
+{{- /* The listing shows its images as a grid, where a half width means
+       nothing. */ -}}
+{{- $images := dict "images" (dict "half" false) -}}
 
-{{- return slice 
-  "id" 
-  "is_not_index" 
-  "draft" 
-  "date" 
-  "title_page" 
+{{- return slice
+  "id"
+  "is_not_index"
+  "draft"
+  "date"
+  "title_page"
   "description"
   "reference"
-  "realestates_types" 
-  $realestates_categories 
-  $realestates_persons 
-  $realestates_sellers 
-  "realestates_offer" 
-  "realestates_informations" 
-  "diagnostic" 
-  "keyfeatures" 
-  "address" 
-  "featured_image" 
-  "gallery"
+  "realestates_types"
+  $realestates_categories
+  $realestates_persons
+  $realestates_sellers
+  "realestates_offer"
+  "realestates_informations"
+  "diagnostic"
+  "keyfeatures"
+  "address"
+  "featured_image"
+  $images
   "body"
   "fee"
   "realestates_legal"
+  "seo"
   "slug"
   "no_index" -}}

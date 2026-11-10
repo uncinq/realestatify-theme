@@ -1,7 +1,16 @@
-{{- $args := dict 
-  "default" (i18n "admin.fields.realestates_legal.default")
+{{/* The legal notice of a real estate, hugolify-admin's legal field (see
+     admin/fields/legal.yml there) prefilled with the Géorisques mention every
+     listing in France has to carry. It writes to the same `legal` key.
+     The widget prints the default unquoted, so it is quoted here: a comma in
+     a translation of the mention would otherwise split the field silently. */}}
+{{- $args := dict
+  "default" (printf "%q" (i18n "admin.fields.realestates_legal.default"))
   "label" (i18n "admin.fields.realestates_legal.label")
   "name" "legal"
+  "minimal" (site.Params.admin.fields.legal.minimal | default true)
+  "buttons" (site.Params.admin.fields.legal.buttons | default "['bold', 'italic', 'link']")
+  "modes" (site.Params.admin.fields.legal.modes | default "['rich_text']")
+  "editor_components" (site.Params.admin.fields.legal.editor_components | default false)
   -}}
 
-{{ partial "admin/widgets/text.js" $args }}
+{{ partial "admin/widgets/markdown.js" $args }}
