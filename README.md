@@ -31,6 +31,10 @@ imports:
   - path: github.com/hugolify/hugolify-theme
 ```
 
+## Structured data
+
+The theme adds `RealEstateAgent`, a local business, to the generic schema.org types of hugolify-theme, through `layouts/_partials/func/GetSchemaTypesTheme.html`. Hugolify admin offers it for the organization, under *Config › Structured data*, and for each place. A site that defines its own hook replaces it, see [Structured data](https://www.hugolify.io/docs/customization/structured-data/#types).
+
 ## Releasing
 
 Tags are `v`-prefixed (`v2.0.0`): a `/v2` module path is only resolvable from a `v2.x.y` semver tag.
