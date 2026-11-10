@@ -1,0 +1,14 @@
+{{/* GetSchemaTypesTheme
+     The schema.org type of a real estate agency, added to the generic ones of
+     hugolify-theme, see func/GetSchemaTypes.html there.
+
+     RealEstateAgent descends from LocalBusiness.
+*/}}
+{{- $localBusiness := slice
+  "RealEstateAgent"
+-}}
+
+{{- return (dict
+  "organization" $localBusiness
+  "local_business" $localBusiness
+) -}}
