@@ -3,3 +3,6 @@ admin:
     realestates_legal: 
       default: 'Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques : www.georisques.gouv.fr'
       label: 'Mentions légales'
+    schema_type:
+      options:
+        RealEstateAgent: "Agence immobilière"
