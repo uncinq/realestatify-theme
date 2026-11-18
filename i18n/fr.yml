@@ -6,3 +6,5 @@ admin:
     schema_type:
       options:
         RealEstateAgent: "Agence immobilière"
+credit:
+  hugolify: un site éco-conçu produit avec <a href="https://www.realestatify.io" target="_blank" rel="noopener noreferrer" title="« Realestatify » - lien externe">Realestatify</a>
